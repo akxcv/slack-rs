@@ -280,6 +280,15 @@ pub enum Event {
         thread_ts: Option<String>,
         title: Option<String>,
     },
+    /// Represents the slack
+    /// [`member_left_channel`](https://api.slack.com/events/member_left_channel)
+    /// event.
+    MemberLeftChannel {
+        user: String,
+        channel: String, // TODO Channel?
+        channel_type: String, // TODO ChannelType enum?
+        team: String,
+    },
 }
 
 /// Represents a confirmation of a message sent
